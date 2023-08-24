@@ -29,7 +29,6 @@ int main(int argc, char **av)
 		parts = parse_in(input);
 		if (!parts)
 		{
-			free(input);
 			continue;
 		}
 		status = _execute_(parts, av);

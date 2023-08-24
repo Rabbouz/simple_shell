@@ -7,9 +7,11 @@
 */
 char **parse_in(char *input)
 {
-	char **commands, *temp, *token = NULL;
+	char **commands = NULL;
+	char *token, *temp = NULL;
 	char  dlm[] = " \n\t";
-	int counter, itr = 0;
+	int counter = 0;
+	int itr = 0;
 
 	if (!input)
 	{

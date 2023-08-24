@@ -11,8 +11,7 @@ void f2d(char **arr)
 
 	while (arr[i])
 	{
-		free(arr[i]);
-		arr[i] = NULL;
+		free(arr[i]),arr[i] = NULL;
 		i++;
 	}
 	free(arr), arr = NULL;

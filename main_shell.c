@@ -15,7 +15,10 @@ int main(int argc, char **av)
 
 	while (1)
 	{
-		write(STDOUT_FILENO, "$ ", 2);
+		if (isatty(STDIN_FILENO))
+		{
+			write(STDOUT_FILENO, "$ ", 2);
+		}
 		input = rd_line();
 		if (input == NULL) /*ctrl D*/
 		{

@@ -7,10 +7,12 @@
 char *_strdup(const char *str)
 {
 	char *pointeur;
-	int i, counter = 0;
+	int i, counter;
 
 	if (str == NULL)
 		return (NULL);
+
+	counter = 0;
 	while (*str != '\0')
 	{
 		counter++;
@@ -20,6 +22,8 @@ char *_strdup(const char *str)
 	pointeur = malloc(sizeof(char) * (counter + 1));
 	if (pointeur == NULL)
 		return (NULL);
+
+	i = 0;
 	while (i <= counter)
 	{
 		pointeur[i] = str[i];

@@ -15,5 +15,5 @@ void f2d(char **arr)
 		arr[i] = NULL;
 		i++;
 	}
-	free(arr);
+	free(arr), arr = NULL;
 }
